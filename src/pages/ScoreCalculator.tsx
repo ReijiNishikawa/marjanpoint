@@ -1,12 +1,7 @@
-import { FormEvent, useState } from 'react'
+import { useState, type FormEvent } from 'react'
 import '../App.css'
-import {
-  GameType,
-  Role,
-  ScoreResult,
-  WinType,
-  calculateScore,
-} from '../utils/score'
+import { calculateScore } from '../utils/score'
+import type { GameType, Role, ScoreResult, WinType } from '../utils/score'
 
 const fuOptions = [20, 25, 30, 40, 50, 60, 70, 80, 90, 100, 110]
 
