@@ -1,4 +1,4 @@
-import { HashRouter, NavLink, Route, Routes } from 'react-router-dom'
+import { NavLink, Route, Routes } from 'react-router-dom'
 import './App.css'
 import FuPage from './pages/FuPage'
 import ScoreCalculator from './pages/ScoreCalculator'
@@ -35,27 +35,25 @@ const BottomNav = () => (
 
 const App = () => {
   return (
-    <HashRouter>
-      <div className="app-shell">
-        <header className="app-header">
-          <div className="brand">
-            <span className="brand-mark">Riichi Score</span>
-            <p className="brand-sub">三麻/四麻 リーチ麻雀点数計算</p>
-          </div>
-        </header>
-        <main className="main">
-          <Routes>
-            <Route path="/" element={<ScoreCalculator />} />
-            <Route path="/yaku" element={<YakuPage />} />
-            <Route path="/fu" element={<FuPage />} />
-          </Routes>
-        </main>
-        <footer className="footer">
-          <span>HashRouter で GitHub Pages 対応済み / Vite + React + TypeScript</span>
-        </footer>
-        <BottomNav />
-      </div>
-    </HashRouter>
+    <div className="app-shell">
+      <header className="app-header">
+        <div className="brand">
+          <span className="brand-mark">Riichi Score</span>
+          <p className="brand-sub">三麻/四麻 リーチ麻雀点数計算</p>
+        </div>
+      </header>
+      <main className="main">
+        <Routes>
+          <Route path="/" element={<ScoreCalculator />} />
+          <Route path="/yaku" element={<YakuPage />} />
+          <Route path="/fu" element={<FuPage />} />
+        </Routes>
+      </main>
+      <footer className="footer">
+        <span>HashRouter で GitHub Pages 対応済み / Vite + React + TypeScript</span>
+      </footer>
+      <BottomNav />
+    </div>
   )
 }
 
